@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Seguros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cotizador de Seguros</h1>
+
+        <div class="form-group">
+            <label for="producto">Seleccione un Producto:</label>
+            <select id="producto" onchange="calcularCostoTotal()">
+                <option value="producto1">Vida</option>
+                <option value="producto2">Auto</option>
+                
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="monto">Monto Total:</label>
+            <input type="number" id="monto" placeholder="Ingrese el monto total">
+        </div>
+
+        <div class="form-group">
+            <label for="cuotas">Número de Cuotas:</label>
+            <input type="number" id="cuotas" placeholder="Ingrese el número de cuotas">
+            <button onclick="calcularPagosEnCuotas()">Calcular Pagos</button>
+        </div>
+
+        <div class="form-group">
+            <label for="impuestos">Impuestos (%):</label>
+            <input type="number" id="impuestos" placeholder="Ingrese el porcentaje de impuestos">
+            <br>
+            <label for="descuentos">Descuentos (%):</label>
+            <input type="number" id="descuentos" placeholder="Ingrese el porcentaje de descuentos">
+            <button onclick="calcularValorFinal()">Calcular Valor Final</button>
+        </div>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
